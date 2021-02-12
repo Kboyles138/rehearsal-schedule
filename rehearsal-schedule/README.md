@@ -1,5 +1,5 @@
 
-Kirsten Was Here :)
+Kirsten Was Here :) Craig's here too
 
 # Getting Started with Create React App
 
