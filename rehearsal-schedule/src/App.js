@@ -3,23 +3,37 @@ import './App.css';
 import StandardCalendar from './components/calendar';
 import React from 'react';
 import ReactDom from 'react-dom';
+import { render } from '@testing-library/react';
 
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="CWU" />
-        <h1 className="App-Title">
-          CWU Rehearsal Calendar
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      calendar: 'default',
+    };
+  }
+  render() {
+
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="CWU" />
+          <h1 className="App-Title">
+            CWU Rehearsal Calendar
         </h1>
-      </header>
-      <p>
-        <StandardCalendar/>
-      </p>
-      
-    </div>
-  );
+
+        </header>
+        <p>
+          <StandardCalendar />
+        </p>
+
+      </div>
+    );
+  }
 }
 
 export default App;
+
+

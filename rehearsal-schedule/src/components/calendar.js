@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import WeekCalendar from 'react-week-calendar';
+import 'react-week-calendar/dist/style.css';
 
 export default class StandardCalendar extends React.Component {
 
