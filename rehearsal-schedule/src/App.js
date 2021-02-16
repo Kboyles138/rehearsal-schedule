@@ -1,5 +1,9 @@
 import logo from './wildcat.png';
 import './App.css';
+import StandardCalendar from './components/calendar';
+import React from 'react';
+import ReactDom from 'react-dom';
+
 
 function App() {
   return (
@@ -11,7 +15,7 @@ function App() {
         </h1>
       </header>
       <p>
-          
+        <StandardCalendar/>
       </p>
       
     </div>
