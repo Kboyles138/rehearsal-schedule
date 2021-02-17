@@ -2,11 +2,11 @@ import React from 'react';
 
 class Form extends React.Component {
     state = {
-        Date: ",
-        StartTime: ",
-        EndTime: ",
-        AddPeople: ",
-        Details: ",
+        Date: '',
+        StartTime: '',
+        EndTime: '',
+        AddPeople: '',
+        Details: '',
     }
 
     render() {
@@ -17,7 +17,7 @@ class Form extends React.Component {
                 </label>
                 <input placeholder='Date'
                     value={this.state.Date}
-                    onChange={e => thissetState({ Date: e.target.value })}
+                    onChange={e => this.setState({ Date: e.target.value })}
                 />
                 <label>
                     Start Time
