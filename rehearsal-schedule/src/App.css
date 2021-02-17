@@ -29,3 +29,9 @@
     transform: rotate(360deg);
   }
 }
+
+.Calendar {
+  width: 1500px;
+  padding-top: 50px;
+  padding-left:50px;
+}

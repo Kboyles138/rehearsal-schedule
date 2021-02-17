@@ -1,11 +1,54 @@
 import React from 'react';
 import moment from 'moment';
 import WeekCalendar from 'react-week-calendar';
-import 'react-week-calendar/dist/style.css';
+//import 'react-week-calendar/dist/style.css';
+import Row from 'react-bootstrap/Row'
+import Container from 'react-bootstrap/Container'
+import Col from 'react-bootstrap/Col'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default class StandardCalendar extends React.Component {
+  render(){
+    return (
+        <Container fluid >
+          <Row>
+              <Col style={{fontSize:45, textAlign: 'center', backgroundColor: '#AB0032'}}>FEB 14 - 20</Col>
+          </Row>
+          <Row style={{borderStyle: 'solid'}}> 
+              <Col sm={1}>
+                <Row style={{borderBottom:'solid', textDecoration:'underline'}}>Time</Row>
+                <Row style={{borderBottom:'solid'}}>3:00</Row>
+                <Row style={{borderBottom:'solid'}}>3:30</Row>
+                <Row style={{borderBottom:'solid'}}>4:00</Row>
+                <Row style={{borderBottom:'solid'}}>4:30</Row>
+                <Row style={{borderBottom:'solid'}}>5:00</Row>
+                <Row style={{borderBottom:'solid'}}>5:30</Row>
+                <Row style={{borderBottom:'solid'}}>6:00</Row>
+                <Row style={{borderBottom:'solid'}}>6:30</Row>
+                <Row style={{borderBottom:'solid'}}>7:00</Row>
+                <Row style={{borderBottom:'solid'}}>7:30</Row>
+                <Row style={{borderBottom:'solid'}}>8:00</Row>
+                <Row style={{borderBottom:'solid'}}>8:30</Row>
+                <Row style={{borderBottom:'solid'}}>9:00</Row>
+                <Row >9:30</Row>
+              </Col>
+              <Col  style={{borderLeft: 'solid', textDecoration:'underline'}}>Sunday</Col>
+              <Col  style={{borderLeft: 'solid', textDecoration:'underline'}}>Monday</Col>
+              <Col  style={{borderLeft: 'solid', textDecoration:'underline'}}>Tuesday</Col>
+              <Col  style={{borderLeft: 'solid', textDecoration:'underline'}}>Wednesday</Col>
+              <Col  style={{borderLeft: 'solid', textDecoration:'underline'}}>Thursday</Col>
+              <Col  style={{borderLeft: 'solid', textDecoration:'underline'}}>Friday</Col>
+              <Col  style={{borderLeft: 'solid', textDecoration:'underline'}}>Saturday</Col>
+          </Row>
 
-  constructor(props) {
+        </Container>
+    );
+  }
+
+
+}
+
+  /*constructor(props) {
     super(props);
     this.state = {
       lastUid: 4,
@@ -69,13 +112,13 @@ export default class StandardCalendar extends React.Component {
 
   render() {
     return <WeekCalendar
-      startTime = {moment({h: 9, m: 0})}
-      endTime = {moment({h: 15, m: 30})}
-      numberOfDays= {14}
+      startTime = {moment({h: 15, m: 0})}
+      endTime = {moment({h: 21, m: 30})}
+      numberOfDays= {7}
       selectedIntervals = {this.state.selectedIntervals}
       onIntervalSelect = {this.handleSelect}
       onIntervalUpdate = {this.handleEventUpdate}
       onIntervalRemove = {this.handleEventRemove}
     />
   }
-}
+}*/

@@ -26,9 +26,9 @@ class App extends React.Component {
         </h1>
 
         </header>
-        <p>
+        <div className="Calendar">
           <StandardCalendar />
-        </p>
+        </div>
         <p>
           <Checklist />
         </p>
