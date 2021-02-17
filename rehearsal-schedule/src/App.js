@@ -6,29 +6,40 @@ import Form from './components/neweventform'
 import React from 'react';
 import ReactDom from 'react-dom';
 import { render } from '@testing-library/react';
+import Form from './components/neweventform.js';
+import Button from 'react-bootstrap/button';
+import Dialog from 'react-bootstrap/ModalDialog'
 
 
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      calendar: 'default',
-    };
-  }
-  render() {
+function App() {
 
-    return (
+  const [show, setShow] = React.useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  return (
+    <>
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="CWU" />
           <h1 className="App-Title">
             CWU Rehearsal Calendar
-        </h1>
-
+          </h1>
         </header>
-        <div className="Calendar">
-          <StandardCalendar />
+        <div>
+        </div>
+        <div className="newEvent">
+          <Button variant="primary" onClick={handleShow}>Add new event</Button>
+        </div>
+        <div className="float-container">
+          <div className="float-child1">
+            <StandardCalendar />
+          </div>
+          <div className="float-child2">
+            <Checklist />
+          </div>
         </div>
         <p>
           <Checklist />
@@ -37,9 +48,10 @@ class App extends React.Component {
           <Form />
         </p>
       </div>
-    );
-  }
+    </>
+  );
 }
+
 
 export default App;
 
