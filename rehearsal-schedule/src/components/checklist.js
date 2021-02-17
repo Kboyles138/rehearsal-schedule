@@ -15,21 +15,38 @@ class Checklist extends React.Component {
                 marginTop: '0',
                 marginBottom: '10px'
             },
-            labels: {
-                fontSize: '18px',
-                lineHeight: '30px',
-                paddingLeft: '10px',
-            },
 
+            labels: {
+                display: 'inline-block',
+                position: 'relative',
+                width: '150px',
+                fontSize: '18px',
+                lineHeight: '20px',
+                paddingLeft: '30px',
+                webkitUserSelect: 'none',
+                mozUserSelect: 'none',
+                msUserSelect: 'none',
+                userSelect: 'none'
+            },
+            oldBox: {
+                opacity: '0',
+                height: '0'
+            },
             boxes: {
                 marginLeft: '20px',
+            },
+            newBox: {
+                position: 'absolute',
+                height: '15px',
+                width: '15px',
+                border: '2px solid red',
+                borderRadius: '4px'
             },
 
             everything: {
                 position: 'absolute',
                 padding: '20px'
             },
-
             rectangle: {
                 width: '200px',
                 height: '250px',
@@ -46,20 +63,31 @@ class Checklist extends React.Component {
             <div style={styles.rectangle} />
             <div>
                 <h2 style={styles.head}>Events</h2>
-                < input type="checkbox"  style={styles.boxes} id="Play 1" name="Play 1" />
-                <label for="Play 1" style={styles.labels}>Play 1</label>
+
+                <label class="checkbox">
+                    <input type="checkbox" style={styles.boxes}/>
+                    <span style={styles.labels}>Play 1<br></br></span>
+                </label>
                 <br></br>
-                < input type="checkbox" style={styles.boxes} id="Play 2" name="Play 2" />
-                <label for="Play 2" style={styles.labels}>Play 2</label>
+                <label class="checkbox">
+                    <input type="checkbox" style={styles.boxes}/>
+                    <span style={styles.labels}>Play 2<br></br></span>
+                </label>
                 <br></br>
-                < input type="checkbox" style={styles.boxes} id="Play 3" name="Play 3" />
-                <label for="Play 3" style={styles.labels}>Play 3</label>
+                <label class="checkbox">
+                    <input type="checkbox" style={styles.boxes}/>
+                    <span style={styles.labels}>Play 3</span>
+                </label>
                 <br></br>
-                < input type="checkbox" style={styles.boxes} id="Play 4" name="Play 4" />
-                <label for="Play 4" style={styles.labels}>Play 4</label>
+                <label class="checkbox">
+                    <input type="checkbox" style={styles.boxes}/>
+                    <span style={styles.labels}>Play 4<br></br></span>
+                </label>
                 <br></br>
-                < input type="checkbox" style={styles.boxes} id="My Rehearsals" name="My Rehearsals" />
-                <label for="My Rehearsals" style={styles.labels}>My Rehearsals</label>
+                <label class="checkbox">
+                    <input type="checkbox" style={styles.boxes}/>
+                    <span style={styles.labels}>My Rehearsals<br></br></span>
+                </label>
             </div>
         </div>
         );
