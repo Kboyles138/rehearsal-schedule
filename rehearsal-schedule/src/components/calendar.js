@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import moment from 'moment';
 import WeekCalendar from 'react-week-calendar';
 //import 'react-week-calendar/dist/style.css';
@@ -7,9 +7,15 @@ import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button'
+import ReactDom from 'react-dom';
 
 export default class StandardCalendar extends React.Component {
+  
+  editForm = () => {
+    this.showEditForm(true);
+  }
   render() {
+    
     return (
       <Container fluid >
         <Row>
@@ -39,7 +45,7 @@ export default class StandardCalendar extends React.Component {
           </Col>
           <Col style={{ borderLeft: 'solid' }}>
             <Row style={{ textDecoration: 'underline' }}>Monday</Row>
-            <Row style={{ paddingLeft: 5 }}><Button style={{ height: 110, width: 175, backgroundColor: 'orange' }}>3:00-5:00</Button></Row>
+            <Row style={{ paddingLeft: 5 }}><Button onClick={this.editForm} style={{ height: 110, width: 175, backgroundColor: 'orange' }}>3:00-5:00</Button></Row>
           </Col>
           <Col style={{ borderLeft: 'solid' }}>
             <Row style={{ textDecoration: 'underline' }}>Tuesday</Row>
