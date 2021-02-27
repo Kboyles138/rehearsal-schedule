@@ -17,12 +17,23 @@ import GoogleCalendar from './components/googleCalendar.tsx'
 
 function App() {
 
-  const [formShow, setFormShow] = useState(false);
-  const [editFormShow, setEditShow] = useState(false);
+  //const [formShow, setFormShow] = useState(false);
+ // const [editFormShow, setEditShow] = useState(false);
 
   return (
     <>
-      <div className="App">
+      <div>
+        <GoogleCalendar />
+      </div>
+    </>
+  );
+}
+
+
+export default App;
+
+
+/*<div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="CWU" />
           <h1 className="App-Title">
@@ -155,14 +166,4 @@ function App() {
             <Button onClick={() => setEditShow(false)}>Save</Button>
           </Modal.Body>
 
-        </Modal>
-        <GoogleCalendar />
-      </div>
-    </>
-  );
-}
-
-
-export default App;
-
-
+        </Modal>*/
