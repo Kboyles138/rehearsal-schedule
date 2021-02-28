@@ -12,7 +12,7 @@ import Modal from 'react-bootstrap/Modal'
 import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
-import GoogleCalendar from './components/googleCalendar.tsx'
+
 
 
 function App() {
@@ -156,7 +156,7 @@ function App() {
           </Modal.Body>
 
         </Modal>
-        <GoogleCalendar />
+        
       </div>
     </>
   );
