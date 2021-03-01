@@ -1,0 +1,49 @@
+.custom-checkbox {
+    cursor:pointer;
+
+}
+
+.checkbox1>.custom-checkbox .custom-control-label::before{
+  border-color:rgb(255, 204, 146);
+  background-color: rgb(255, 204, 146);
+}
+.checkbox1>.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+  background-color:rgb(255, 166, 64);
+  border-color:rgb(255, 166, 64);
+}
+
+.checkbox2>.custom-checkbox .custom-control-label::before{
+  border-color:rgb(165, 174, 255);
+  background-color: rgb(165, 174, 255);
+}
+  .checkbox2>.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+    background-color:rgb(95, 111, 255);
+    border-color:rgb(95, 111, 255);
+  }
+
+  .checkbox3>.custom-checkbox .custom-control-label::before{
+    border-color:rgb(255, 171, 171);
+    background-color: rgb(255, 171, 171);
+  }
+  .checkbox3>.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+    background-color:rgb(255, 75, 75);
+    border-color:rgb(255, 75, 75);
+  }
+
+  .checkbox4>.custom-checkbox .custom-control-label::before{
+    border-color:rgb(172, 251, 169);
+    background-color: rgb(172, 251, 169);
+  }
+  .checkbox4>.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+    background-color:rgb(80, 197, 76);
+    border-color:rgb(80, 197, 76);
+  }
+
+  .checkbox5>.custom-checkbox .custom-control-label::before{
+    border-color:rgb(61, 61, 61);
+    background-color: rgb(61, 61, 61);
+  }
+  .checkbox5>.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+    background-color:rgb(0, 0, 0);
+    border-color:rgb(0, 0, 0);
+  }
