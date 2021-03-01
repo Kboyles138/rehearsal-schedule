@@ -1,67 +1,68 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
-class Form extends React.Component {
-    state = {
-        Date: '',
-        StartTime: '',
-        EndTime: '',
-        AddPeople: '',
-        Details: '',
+class NewEventForm extends React.Component {
+    constructor(props, context) {
+        super(props, context);
+
+        this.handleShow = this.handleShow.bind(this);
+        this.handleClose = this.handleClose.bind(this);
+
+        this.state = {
+            show: false,
+        };
+    }
+
+    handleClose() {
+        this.setState({ show: false });
+    }
+
+    handleShow() {
+        this.setState({ show: true });
     }
 
     render() {
         return (
-            <form>
-                <label>
-                    Date
-                </label>
-                <input placeholder='Date'
-                    value={this.state.Date}
-                    onChange={e => this.setState({ Date: e.target.value })}
-                />
-                <label>
-                    Start Time
-                </label>
-                <input placeholder='StartTime'
-                    value={this.state.StartTime}
-                    onChange={e => this.setState({ StartTime: e.target.value })}
-                />
-                <label>
-                    End Time
-                </label>
-                <input placeholder='EndTime'
-                    value={this.state.EndTime}
-                    onChange={e => this.setState({ EndTime: e.target.value })}
-                />
-                <label>
-                    SelectPlay
-                <select value={this.state.value} onChange={this.handleChange}>
-                        <option value="Play1"> Play 1</option>
-                        <option value="Play2"> Play 2</option>
-                        <option value="Play3"> Play 3</option>
-                        <option value="Play4"> Play 4</option>
-                        <option value="AddNew">Add New Play</option>
-                    </select>
-                </label>
-                <label>
-                    Add People
-                </label>
-                <input placeholder="AddPeople"
-                    value={this.state.AddPeople}
-                    onChange={e => this.setState({ AddPeople: e.target.value })}
-                />
-                <label>
-                    Details
-                </label>
-                <input placeholder="Details"
-                    value={this.state.Details}
-                    onChange={e => this.setState({ Details: e.target.value })}
-                />
-                <input type="submit" value="Submit" />
-            </form>
+            <>
+                <Button variant="primary" onClick={this.handleShow}>Add new event</Button>
 
-        );
-        
+                <Modal show={this.state.show} onHide={this.handleClose}>
+                    <Modal.Header closeButton >
+                        <Modal.Title>
+                            New Event
+                            </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <Form.Group>
+                            <Form.Label>Date: </Form.Label>
+                            <Form.Control type="date" name="date" placeholder="date" />
+                            <Form.Label>Start Time: </Form.Label>
+                            <Form.Control type="time" />
+                            <Form.Label>End Time: </Form.Label>
+                            <Form.Control type="time" />
+                            <Form.Label>Select Play: </Form.Label>
+                            <Form.Control as="select" size="sm" custom>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>Add new play</option>
+                            </Form.Control>
+                            <Form.Label>Add people: </Form.Label>
+                            <Form.Control type="text" />
+                            <Form.Label>Details: </Form.Label>
+                            <Form.Control type="text" />
+                        </Form.Group>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="primary" onClick={this.handleClose}>Add</Button>
+                    </Modal.Footer>
+                </Modal>
+            </>
+        )
     }
 }
-export default Form;
+
+export default NewEventForm;

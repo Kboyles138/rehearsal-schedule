@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import moment from 'moment';
 import WeekCalendar from 'react-week-calendar';
 //import 'react-week-calendar/dist/style.css';
@@ -8,15 +8,15 @@ import Col from 'react-bootstrap/Col'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button'
 import ReactDom from 'react-dom';
+import Form from 'react-bootstrap/form'
+import Modal from 'react-bootstrap/Modal'
 
-export default class StandardCalendar extends React.Component {
-  
-  editForm = () => {
-    this.showEditForm(true);
-  }
+class Calendar extends React.Component {
+
+
   render() {
-    
     return (
+      <>
       <Container fluid >
         <Row>
           <Col style={{ fontSize: 45, textAlign: 'center', backgroundColor: '#AB0032' }}>FEB 14 - 20</Col>
@@ -40,101 +40,97 @@ export default class StandardCalendar extends React.Component {
             <Row >9:30</Row>
           </Col>
           <Col style={{ borderLeft: 'solid' }}>
-            <Row style={{ textDecoration: 'underline' }}>Sunday</Row>
-            
+            <Row style={{ textDecoration: 'underline' }}>Sunday 14</Row>
+
           </Col>
           <Col style={{ borderLeft: 'solid' }}>
-            <Row style={{ textDecoration: 'underline' }}>Monday</Row>
-            <Row style={{ paddingLeft: 5 }}><Button onClick={this.editForm} style={{ height: 110, width: 175, backgroundColor: 'orange' }}>3:00-5:00</Button></Row>
+            <Row style={{ textDecoration: 'underline' }}>Monday 15</Row>
+            <Row style={{ paddingLeft: 5 }} className="Orange"><Button style={{ height: 110, width: 175, backgroundColor: 'orange' }} >3:00-5:00</Button></Row>
           </Col>
           <Col style={{ borderLeft: 'solid' }}>
-            <Row style={{ textDecoration: 'underline' }}>Tuesday</Row>
-            <Row style={{ paddingLeft: 5, paddingTop: 100}}><Button style={{ height: 110, width: 175, backgroundColor: 'orange' }}>5:00-7:00</Button></Row>
+            <Row style={{ textDecoration: 'underline' }}>Tuesday 16</Row>
+            <Row style={{ paddingLeft: 5, paddingTop: 100 }} className="Orange"><Button style={{ height: 110, width: 175, backgroundColor: 'orange' }}>5:00-7:00</Button></Row>
           </Col>
-          <Col style={{ borderLeft: 'solid', textDecoration: 'underline' }}>Wednesday</Col>
-          <Col style={{ borderLeft: 'solid', textDecoration: 'underline' }}>Thursday</Col>
-          <Col style={{ borderLeft: 'solid', textDecoration: 'underline' }}>Friday</Col>
-          <Col style={{ borderLeft: 'solid', textDecoration: 'underline' }}>Saturday</Col>
+          <Col style={{ borderLeft: 'solid', textDecoration: 'underline' }}>Wednesday 17</Col>
+          <Col style={{ borderLeft: 'solid', textDecoration: 'underline' }}>Thursday 18</Col>
+          <Col style={{ borderLeft: 'solid', textDecoration: 'underline' }}>Friday 19</Col>
+          <Col style={{ borderLeft: 'solid', textDecoration: 'underline' }}>Saturday 20</Col>
         </Row>
 
       </Container>
+      <div style={{ marginTop: 50 }} >
+      <Container >
+        <Form style={{ backgroundColor: "orange", borderRadius: 25, width: 900 }}>
+          <Form.Group style={{ paddingLeft: 35 }}>
+            <Form.Row style={{ paddingTop: 5 }}>
+              <Form.Label>Date: </Form.Label>
+              <Form.Text style={{ paddingLeft: 60 }}> 2/15/21</Form.Text>
+              <Form.Text><a style={{ textDecoration: "underline", paddingLeft: 650 }}>Edit</a></Form.Text>
+            </Form.Row>
+            <Form.Row style={{ paddingTop: 5 }}>
+              <Form.Label>Start Time: </Form.Label>
+              <Form.Text style={{ paddingLeft: 20 }}> 3:00 </Form.Text>
+            </Form.Row>
+            <Form.Row style={{ paddingTop: 5 }}>
+              <Form.Label>End Time: </Form.Label>
+              <Form.Text style={{ paddingLeft: 25 }}> 5:00 </Form.Text>
+            </Form.Row>
+            <Form.Row style={{ paddingTop: 5 }}>
+              <Form.Label>Play:  </Form.Label>
+              <Form.Text style={{ paddingLeft: 60 }}> Play 1 </Form.Text>
+            </Form.Row>
+            <Form.Row style={{ paddingTop: 5 }}>
+              <Form.Label>People: </Form.Label>
+              <Form.Text style={{ paddingLeft: 40 }}>FILLER </Form.Text>
+            </Form.Row>
+            <Form.Row style={{ paddingTop: 5 }}>
+              <Form.Label>Details: </Form.Label>
+              <Form.Text style={{ paddingLeft: 39 }}> FILLER </Form.Text>
+            </Form.Row>
+          </Form.Group>
+        </Form>
+      </Container>
+    </div>
+    <div>
+        <Modal
+          size="lg"
+          
+          
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>
+              Edit Event
+                </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Form.Group>
+              <Form.Label>Date: </Form.Label>
+              <Form.Control type="date" name="date" placeholder="date" />
+              <Form.Label>Start Time: </Form.Label>
+              <Form.Control type="time" />
+              <Form.Label>End Time: </Form.Label>
+              <Form.Control type="time" />
+              <Form.Label>Select Play: </Form.Label>
+              <Form.Control as="select" size="sm" custom>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>Add new play</option>
+              </Form.Control>
+              <Form.Label>Add people: </Form.Label>
+              <Form.Control type="text" />
+              <Form.Label>Details: </Form.Label>
+              <Form.Control type="text" />
+            </Form.Group>
+            <Button >Save</Button>
+          </Modal.Body>
+
+        </Modal>
+
+      </div>
+    </>
     );
   }
-
-
 }
 
-/*constructor(props) {
-  super(props);
-  this.state = {
-    lastUid: 4,
-    selectedIntervals: [
-      {
-        uid: 1,
-        start: moment({h: 10, m: 5}),
-        end: moment({h: 12, m: 5}),
-        value: "Booked by Smith"
-      },
-      {
-        uid: 2,
-        start: moment({h: 13, m: 0}).add(2,'d'),
-        end: moment({h: 13, m: 45}).add(2,'d'),
-        value: "Closed"
-      },
-      {
-        uid: 3,
-        start: moment({h: 11, m: 0}),
-        end: moment({h: 14, m: 0}),
-        value: "Reserved by White"
-      },
-    ]
-  }
-}
-
-handleEventRemove = (event) => {
-  const {selectedIntervals} = this.state;
-  const index = selectedIntervals.findIndex((interval) => interval.uid === event.uid);
-  if (index > -1) {
-    selectedIntervals.splice(index, 1);
-    this.setState({selectedIntervals});
-  }
-
-}
-
-handleEventUpdate = (event) => {
-  const {selectedIntervals} = this.state;
-  const index = selectedIntervals.findIndex((interval) => interval.uid === event.uid);
-  if (index > -1) {
-    selectedIntervals[index] = event;
-    this.setState({selectedIntervals});
-  }
-}
-
-handleSelect = (newIntervals) => {
-  const {lastUid, selectedIntervals} = this.state;
-  const intervals = newIntervals.map( (interval, index) => {
-
-    return {
-      ...interval,
-      uid: lastUid + index
-    }
-  });
-
-  this.setState({
-    selectedIntervals: selectedIntervals.concat(intervals),
-    lastUid: lastUid + newIntervals.length
-  })
-}
-
-render() {
-  return <WeekCalendar
-    startTime = {moment({h: 15, m: 0})}
-    endTime = {moment({h: 21, m: 30})}
-    numberOfDays= {7}
-    selectedIntervals = {this.state.selectedIntervals}
-    onIntervalSelect = {this.handleSelect}
-    onIntervalUpdate = {this.handleEventUpdate}
-    onIntervalRemove = {this.handleEventRemove}
-  />
-}
-}*/
+export default Calendar;
