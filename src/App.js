@@ -96,21 +96,21 @@ function App() {
                   <Row >9:30</Row>
                 </Col>
                 <Col style={{ borderLeft: 'solid' }}>
-                  <Row style={{ textDecoration: 'underline' }}>Sunday</Row>
+                  <Row style={{ textDecoration: 'underline' }}>Sunday 14</Row>
 
                 </Col>
                 <Col style={{ borderLeft: 'solid' }}>
-                  <Row style={{ textDecoration: 'underline' }}>Monday</Row>
+                  <Row style={{ textDecoration: 'underline' }}>Monday 15</Row>
                   <Row style={{ paddingLeft: 5 }} className="Orange"><Button style={{ height: 110, width: 175, backgroundColor: 'orange' }} onClick={() => setDetailShow1(true)}>3:00-5:00</Button></Row>
                 </Col>
                 <Col style={{ borderLeft: 'solid' }}>
-                  <Row style={{ textDecoration: 'underline' }}>Tuesday</Row>
+                  <Row style={{ textDecoration: 'underline' }}>Tuesday 16</Row>
                   <Row style={{ paddingLeft: 5, paddingTop: 100 }} className="Orange"><Button style={{ height: 110, width: 175, backgroundColor: 'orange' }}>5:00-7:00</Button></Row>
                 </Col>
-                <Col style={{ borderLeft: 'solid', textDecoration: 'underline' }}>Wednesday</Col>
-                <Col style={{ borderLeft: 'solid', textDecoration: 'underline' }}>Thursday</Col>
-                <Col style={{ borderLeft: 'solid', textDecoration: 'underline' }}>Friday</Col>
-                <Col style={{ borderLeft: 'solid', textDecoration: 'underline' }}>Saturday</Col>
+                <Col style={{ borderLeft: 'solid', textDecoration: 'underline' }}>Wednesday 17</Col>
+                <Col style={{ borderLeft: 'solid', textDecoration: 'underline' }}>Thursday 18</Col>
+                <Col style={{ borderLeft: 'solid', textDecoration: 'underline' }}>Friday 19</Col>
+                <Col style={{ borderLeft: 'solid', textDecoration: 'underline' }}>Saturday 20</Col>
               </Row>
 
             </Container>
@@ -160,32 +160,32 @@ function App() {
       </div>
       <div style={{ marginTop: 500 }} >
         <Container className={setDetailShow1}>
-          <Form style={{ backgroundColor: "orange", }}>
-            <Form.Group >
-              <Form.Row style={{ paddingLeft: 20, paddingTop: 5 }}>
+          <Form style={{ backgroundColor: "orange", borderRadius:25, width:900}}>
+            <Form.Group style={{paddingLeft: 35}}>
+              <Form.Row style={{ paddingTop: 5 }}>
                 <Form.Label>Date: </Form.Label>
-                <Form.Text style={{ paddingLeft: 20 }}> 2/15/21</Form.Text>
-                <Form.Text><a onClick={() => setEditShow(true)} style={{ textDecoration: "underline", paddingLeft: 950 }}>Edit</a></Form.Text>
+                <Form.Text style={{ paddingLeft: 60 }}> 2/15/21</Form.Text>
+                <Form.Text><a onClick={() => setEditShow(true)} style={{ textDecoration: "underline", paddingLeft: 650 }}>Edit</a></Form.Text>
               </Form.Row>
-              <Form.Row style={{ paddingLeft: 20, paddingTop: 5 }}>
+              <Form.Row style={{ paddingTop: 5 }}>
                 <Form.Label>Start Time: </Form.Label>
                 <Form.Text style={{ paddingLeft: 20 }}> 3:00 </Form.Text>
               </Form.Row>
-              <Form.Row style={{ paddingLeft: 20, paddingTop: 5 }}>
+              <Form.Row style={{paddingTop: 5 }}>
                 <Form.Label>End Time: </Form.Label>
-                <Form.Text style={{ paddingLeft: 20 }}> 5:00 </Form.Text>
+                <Form.Text style={{ paddingLeft: 25 }}> 5:00 </Form.Text>
               </Form.Row>
-              <Form.Row style={{ paddingLeft: 20, paddingTop: 5 }}>
+              <Form.Row style={{ paddingTop: 5 }}>
                 <Form.Label>Play:  </Form.Label>
-                <Form.Text style={{ paddingLeft: 20 }}> Play 1 </Form.Text>
+                <Form.Text style={{ paddingLeft: 60 }}> Play 1 </Form.Text>
               </Form.Row>
-              <Form.Row style={{ paddingLeft: 20, paddingTop: 5 }}>
+              <Form.Row style={{  paddingTop: 5 }}>
                 <Form.Label>People: </Form.Label>
-                <Form.Text style={{ paddingLeft: 20 }}>  </Form.Text>
+                <Form.Text style={{ paddingLeft: 40 }}>FILLER </Form.Text>
               </Form.Row>
-              <Form.Row style={{ paddingLeft: 20, paddingTop: 5 }}>
+              <Form.Row style={{ paddingTop: 5 }}>
                 <Form.Label>Details: </Form.Label>
-                <Form.Text style={{ paddingLeft: 20 }}>  </Form.Text>
+                <Form.Text style={{ paddingLeft: 39 }}> FILLER </Form.Text>
               </Form.Row>
             </Form.Group>
           </Form>
