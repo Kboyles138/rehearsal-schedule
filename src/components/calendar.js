@@ -23,7 +23,7 @@ class Calendar extends React.Component {
       isHidden: true,
     };
   }
-
+  
   handleClose() {
     this.setState({ show: false });
   }
@@ -82,53 +82,16 @@ class Calendar extends React.Component {
           </Row>
 
         </Container>
-        {!this.state.isHidden && <PlayDetails1 />}
-        <div>
-          <Modal show={this.state.show} onHide={this.handleClose} >
-            <Modal.Header closeButton>
-              <Modal.Title>
-                Edit Event
-                </Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              <Form.Group>
-                <Form.Label>Date: </Form.Label>
-                <Form.Control type="date" name="date" placeholder="date" />
-                <Form.Label>Start Time: </Form.Label>
-                <Form.Control type="time" />
-                <Form.Label>End Time: </Form.Label>
-                <Form.Control type="time" />
-                <Form.Label>Select Play: </Form.Label>
-                <Form.Control as="select" size="sm" custom>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>Add new play</option>
-                </Form.Control>
-                <Form.Label>Add people: </Form.Label>
-                <Form.Control type="text" />
-                <Form.Label>Details: </Form.Label>
-                <Form.Control type="text" />
-              </Form.Group>
-              <Button onClick={this.handleClose}>Save</Button>
-            </Modal.Body>
-          </Modal>
-        </div>
-
-      </>
-    );
-  }
-}
-
-const PlayDetails1 = () => (
-  <div style={{ marginTop: 50 }} >
+        
+        {!this.state.isHidden && <div style={{ marginTop: 50 }} >
           <Container >
             <Form style={{ backgroundColor: "orange", borderRadius: 25, width: 900 }}>
               <Form.Group style={{ paddingLeft: 35 }}>
                 <Form.Row style={{ paddingTop: 5 }}>
                   <Form.Label>Date: </Form.Label>
                   <Form.Text style={{ paddingLeft: 60 }}> 2/15/21</Form.Text>
-                  <Form.Text><a style={{ textDecoration: "underline", paddingLeft: 650  }} >Edit</a></Form.Text>
+                  <Form.Text ><a style={{ textDecoration: "underline", paddingLeft: 650 }} onClick={this.handleShow} >Edit</a></Form.Text>
+                  <Form.Text><a onClick={this.toggleHidden.bind(this)} style={{paddingLeft: 30}}>X</a></Form.Text>        
                 </Form.Row>
                 <Form.Row style={{ paddingTop: 5 }}>
                   <Form.Label>Start Time: </Form.Label>
@@ -154,6 +117,83 @@ const PlayDetails1 = () => (
             </Form>
           </Container>
         </div>
+         }
+        
+
+        <Modal show={this.state.show} onHide={this.handleClose} >
+           <Modal.Header closeButton>
+             <Modal.Title>
+               Edit Event
+               </Modal.Title>
+           </Modal.Header>
+           <Modal.Body>
+             <Form.Group>
+               <Form.Label>Date: </Form.Label>
+               <Form.Control type="date" name="date" placeholder="date" />
+               <Form.Label>Start Time: </Form.Label>
+               <Form.Control type="time" />
+               <Form.Label>End Time: </Form.Label>
+               <Form.Control type="time" />
+               <Form.Label>Select Play: </Form.Label>
+               <Form.Control as="select" size="sm" custom>
+                 <option>1</option>
+                 <option>2</option>
+                 <option>3</option>
+                 <option>Add new play</option>
+               </Form.Control>
+               <Form.Label>Add people: </Form.Label>
+               <Form.Control type="text" />
+               <Form.Label>Details: </Form.Label>
+               <Form.Control type="text" />
+             </Form.Group>
+             <Button onClick={this.handleClose}>Save</Button>
+           </Modal.Body>
+         </Modal>
+
+      </>
+    );
+  }
+}
+
+const PlayDetails1 = () => (
+  <>
+  <div style={{ marginTop: 50 }} >
+          <Container >
+            <Form style={{ backgroundColor: "orange", borderRadius: 25, width: 900 }}>
+              <Form.Group style={{ paddingLeft: 35 }}>
+                <Form.Row style={{ paddingTop: 5 }}>
+                  <Form.Label>Date: </Form.Label>
+                  <Form.Text style={{ paddingLeft: 60 }}> 2/15/21</Form.Text>
+                  
+                  
+                </Form.Row>
+                <Form.Row style={{ paddingTop: 5 }}>
+                  <Form.Label>Start Time: </Form.Label>
+                  <Form.Text style={{ paddingLeft: 20 }}> 3:00 </Form.Text>
+                </Form.Row>
+                <Form.Row style={{ paddingTop: 5 }}>
+                  <Form.Label>End Time: </Form.Label>
+                  <Form.Text style={{ paddingLeft: 25 }}> 5:00 </Form.Text>
+                </Form.Row>
+                <Form.Row style={{ paddingTop: 5 }}>
+                  <Form.Label>Play:  </Form.Label>
+                  <Form.Text style={{ paddingLeft: 60 }}> Play 1 </Form.Text>
+                </Form.Row>
+                <Form.Row style={{ paddingTop: 5 }}>
+                  <Form.Label>People: </Form.Label>
+                  <Form.Text style={{ paddingLeft: 40 }}>FILLER </Form.Text>
+                </Form.Row>
+                <Form.Row style={{ paddingTop: 5 }}>
+                  <Form.Label>Details: </Form.Label>
+                  <Form.Text style={{ paddingLeft: 39 }}> FILLER </Form.Text>
+                </Form.Row>
+              </Form.Group>
+            </Form>
+          </Container>
+        </div>
+         
+         
+       </>
 )
 
 export default Calendar;
