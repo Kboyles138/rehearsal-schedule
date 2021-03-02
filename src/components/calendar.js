@@ -20,7 +20,8 @@ class Calendar extends React.Component {
 
     this.state = {
       show: false,
-      isHidden: true,
+      isHidden1: true,
+      isHidden2: true,
     };
   }
   
@@ -32,9 +33,14 @@ class Calendar extends React.Component {
     this.setState({ show: true });
   }
 
-  toggleHidden () {
+  toggleHidden1 () {
     this.setState({
-      isHidden: !this.state.isHidden
+      isHidden1: !this.state.isHidden1
+    })
+  }
+  toggleHidden2 () {
+    this.setState({
+      isHidden2: !this.state.isHidden2
     })
   }
 
@@ -69,11 +75,11 @@ class Calendar extends React.Component {
             </Col>
             <Col style={{ borderLeft: 'solid' }}>
               <Row style={{ textDecoration: 'underline' }}>Monday 15</Row>
-              <Row style={{ paddingLeft: 5 }} className="Orange"><Button style={{ height: 110, width: 175, backgroundColor: 'orange' }} onClick={this.toggleHidden.bind(this)} >3:00-5:00</Button></Row>
+              <Row style={{ paddingLeft: 5 }} className="Orange"><Button style={{ height: 110, width: 175, backgroundColor: 'orange' }} onClick={this.toggleHidden1.bind(this)} >3:00-5:00</Button></Row>
             </Col>
             <Col style={{ borderLeft: 'solid' }}>
               <Row style={{ textDecoration: 'underline' }}>Tuesday 16</Row>
-              <Row style={{ paddingLeft: 5, paddingTop: 100 }} className="Orange"><Button style={{ height: 110, width: 175, backgroundColor: 'orange' }}>5:00-7:00</Button> </Row>
+              <Row style={{ paddingLeft: 5, paddingTop: 100 }} className="Orange"><Button style={{ height: 110, width: 175, backgroundColor: 'orange' }} onClick={this.toggleHidden2.bind(this)}>5:00-7:00</Button> </Row>
             </Col>
             <Col style={{ borderLeft: 'solid', textDecoration: 'underline' }}>Wednesday 17</Col>
             <Col style={{ borderLeft: 'solid', textDecoration: 'underline' }}>Thursday 18</Col>
@@ -83,7 +89,7 @@ class Calendar extends React.Component {
 
         </Container>
         
-        {!this.state.isHidden && <div style={{ marginTop: 50 }} >
+        {!this.state.isHidden1 && <div style={{ marginTop: 50 }} >
           <Container >
             <Form style={{ backgroundColor: "orange", borderRadius: 25, width: 900 }}>
               <Form.Group style={{ paddingLeft: 35 }}>
@@ -91,7 +97,7 @@ class Calendar extends React.Component {
                   <Form.Label>Date: </Form.Label>
                   <Form.Text style={{ paddingLeft: 60 }}> 2/15/21</Form.Text>
                   <Form.Text ><a style={{ textDecoration: "underline", paddingLeft: 650 }} onClick={this.handleShow} >Edit</a></Form.Text>
-                  <Form.Text><a onClick={this.toggleHidden.bind(this)} style={{paddingLeft: 30}}>X</a></Form.Text>        
+                  <Form.Text><a onClick={this.toggleHidden1.bind(this)} style={{paddingLeft: 30}}>X</a></Form.Text>        
                 </Form.Row>
                 <Form.Row style={{ paddingTop: 5 }}>
                   <Form.Label>Start Time: </Form.Label>
@@ -100,6 +106,41 @@ class Calendar extends React.Component {
                 <Form.Row style={{ paddingTop: 5 }}>
                   <Form.Label>End Time: </Form.Label>
                   <Form.Text style={{ paddingLeft: 25 }}> 5:00 </Form.Text>
+                </Form.Row>
+                <Form.Row style={{ paddingTop: 5 }}>
+                  <Form.Label>Play:  </Form.Label>
+                  <Form.Text style={{ paddingLeft: 60 }}> Play 1 </Form.Text>
+                </Form.Row>
+                <Form.Row style={{ paddingTop: 5 }}>
+                  <Form.Label>People: </Form.Label>
+                  <Form.Text style={{ paddingLeft: 40 }}>FILLER </Form.Text>
+                </Form.Row>
+                <Form.Row style={{ paddingTop: 5 }}>
+                  <Form.Label>Details: </Form.Label>
+                  <Form.Text style={{ paddingLeft: 39 }}> FILLER </Form.Text>
+                </Form.Row>
+              </Form.Group>
+            </Form>
+          </Container>
+        </div>
+         }
+         {!this.state.isHidden2 && <div style={{ marginTop: 50 }} >
+          <Container >
+            <Form style={{ backgroundColor: "orange", borderRadius: 25, width: 900 }}>
+              <Form.Group style={{ paddingLeft: 35 }}>
+                <Form.Row style={{ paddingTop: 5 }}>
+                  <Form.Label>Date: </Form.Label>
+                  <Form.Text style={{ paddingLeft: 60 }}> 2/16/21</Form.Text>
+                  <Form.Text ><a style={{ textDecoration: "underline", paddingLeft: 650 }} onClick={this.handleShow} >Edit</a></Form.Text>
+                  <Form.Text><a onClick={this.toggleHidden2.bind(this)} style={{paddingLeft: 30}}>X</a></Form.Text>        
+                </Form.Row>
+                <Form.Row style={{ paddingTop: 5 }}>
+                  <Form.Label>Start Time: </Form.Label>
+                  <Form.Text style={{ paddingLeft: 20 }}> 5:00 </Form.Text>
+                </Form.Row>
+                <Form.Row style={{ paddingTop: 5 }}>
+                  <Form.Label>End Time: </Form.Label>
+                  <Form.Text style={{ paddingLeft: 25 }}> 7:00 </Form.Text>
                 </Form.Row>
                 <Form.Row style={{ paddingTop: 5 }}>
                   <Form.Label>Play:  </Form.Label>
@@ -155,45 +196,5 @@ class Calendar extends React.Component {
   }
 }
 
-const PlayDetails1 = () => (
-  <>
-  <div style={{ marginTop: 50 }} >
-          <Container >
-            <Form style={{ backgroundColor: "orange", borderRadius: 25, width: 900 }}>
-              <Form.Group style={{ paddingLeft: 35 }}>
-                <Form.Row style={{ paddingTop: 5 }}>
-                  <Form.Label>Date: </Form.Label>
-                  <Form.Text style={{ paddingLeft: 60 }}> 2/15/21</Form.Text>
-                  
-                  
-                </Form.Row>
-                <Form.Row style={{ paddingTop: 5 }}>
-                  <Form.Label>Start Time: </Form.Label>
-                  <Form.Text style={{ paddingLeft: 20 }}> 3:00 </Form.Text>
-                </Form.Row>
-                <Form.Row style={{ paddingTop: 5 }}>
-                  <Form.Label>End Time: </Form.Label>
-                  <Form.Text style={{ paddingLeft: 25 }}> 5:00 </Form.Text>
-                </Form.Row>
-                <Form.Row style={{ paddingTop: 5 }}>
-                  <Form.Label>Play:  </Form.Label>
-                  <Form.Text style={{ paddingLeft: 60 }}> Play 1 </Form.Text>
-                </Form.Row>
-                <Form.Row style={{ paddingTop: 5 }}>
-                  <Form.Label>People: </Form.Label>
-                  <Form.Text style={{ paddingLeft: 40 }}>FILLER </Form.Text>
-                </Form.Row>
-                <Form.Row style={{ paddingTop: 5 }}>
-                  <Form.Label>Details: </Form.Label>
-                  <Form.Text style={{ paddingLeft: 39 }}> FILLER </Form.Text>
-                </Form.Row>
-              </Form.Group>
-            </Form>
-          </Container>
-        </div>
-         
-         
-       </>
-)
 
 export default Calendar;
