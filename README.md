@@ -1,9 +1,9 @@
 
 
-##Clone Repository into VS CODE
+## Clone Repository into VS CODE
 
 In the terminal, run 'npm install'
-###'npm install'
+### 'npm install'
 
 ## Launch Site
 
