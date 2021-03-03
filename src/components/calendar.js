@@ -91,7 +91,7 @@ class Calendar extends React.Component {
       <>
         <Container fluid >
           <Row>
-            <Col style={{ fontSize: 45, textAlign: 'center', backgroundColor: '#AB0032', borderTopRightRadius: 25, borderTopLeftRadius: 25}}>FEB 14 - 20</Col>
+            <Col style={{ fontSize: 45, textAlign: 'center', backgroundColor: '#AB0032', borderTopRightRadius: 25, borderTopLeftRadius: 25, color: 'white'}}>FEB 14 - 20</Col>
           </Row>
           <Row style={{ borderStyle: 'solid' }}>
             <Col sm={1}>

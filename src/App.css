@@ -49,9 +49,11 @@
 .float-child2 {
   width: 20%;
   float: left;
-  padding: 20px;
+  padding-top: 75px;
+  padding-left: 90px;
 } 
 .newEvent {
-  padding-left: 20px;
+  padding-left: 30px;
   padding-top: 20px;
+  padding-bottom: 10px;
 }
