@@ -1,13 +1,13 @@
 
-Kirsten Was Here :) Craig's here too
 
-# Getting Started with Create React App
+##Clone Repository into VS CODE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In the terminal, run 'npm install'
+###'npm install'
 
-## Available Scripts
+## Launch Site
 
-In the project directory, you can run:
+After run 'npm start' to compile the code in your preferred browser.
 
 ### `npm start`
 
