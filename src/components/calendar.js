@@ -10,6 +10,7 @@ import Button from 'react-bootstrap/Button'
 import ReactDom from 'react-dom';
 import Form from 'react-bootstrap/form'
 import Modal from 'react-bootstrap/Modal'
+import  './checklist.css';
 
 const mdbreact = require('mdbreact'); const { MDBInput } = mdbreact;
 
