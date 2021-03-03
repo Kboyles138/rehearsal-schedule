@@ -169,16 +169,16 @@ class Calendar extends React.Component {
       break: { display: 'block', margin: '3px' },
 
       child1: {
-        width: '80%',
+        width: '75%',
         float: 'left',
-        paddingLeft: '20px',
+        marginLeft: '20px',
 
       },
       child2: {
         width: '20%',
-        float: 'left',
-        paddingTop: '75px',
-        paddingLeft: '90px',
+        float: 'right',
+        marginTop: '75px',
+        marginLeft: '70px',
       }
     }
     return (
@@ -242,7 +242,6 @@ class Calendar extends React.Component {
                 <Row style={{ textDecoration: 'underline', paddingLeft: 7 }}>Saturday 20</Row>
               </Col>
             </Row>
-
           </div >
 
 
@@ -287,7 +286,7 @@ class Calendar extends React.Component {
 
           </div>
         </Container>
-        <Container style={{paddingTop: 475}}>
+        <Container style={{marginTop: 525}}>
           {!this.state.isHidden1 && <div style={{ marginTop: 50 }} >
             <Container >
               <Form style={{ backgroundColor: "#ffa640", borderRadius: 25, width: 900 }}>
