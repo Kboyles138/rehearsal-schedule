@@ -18,15 +18,9 @@ function App() {
         <div className="newEvent">
           <NewEventForm />
         </div>
-        <div className="float-container">
-          <div className="float-child1">
-            <Calendar />
-          </div>
-          <div className="float-child2">
-            <Checklist />
-          </div>
-        </div>
-      </div>      
+        <Calendar />
+      
+    </div>      
     </>
   );
 }

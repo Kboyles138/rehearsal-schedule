@@ -11,6 +11,8 @@ import ReactDom from 'react-dom';
 import Form from 'react-bootstrap/form'
 import Modal from 'react-bootstrap/Modal'
 
+const mdbreact = require('mdbreact'); const { MDBInput } = mdbreact;
+
 class Calendar extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -86,69 +88,204 @@ class Calendar extends React.Component {
     })
   }
 
+  toggleAll() {
+    if (document.getElementById('myPlays').checked) {
+      document.getElementById('play1').checked = true;
+      document.getElementById('play2').checked = false;
+      document.getElementById('play3').checked = true;
+      document.getElementById('play4').checked = false;
+    } else {
+      document.getElementById('play1').checked = false;
+      document.getElementById('play2').checked = false;
+      document.getElementById('play3').checked = false;
+      document.getElementById('play4').checked = false;
+    }
+  }
+
+
+  uncheckMyEvents() {
+    document.getElementById('myPlays').checked = false;
+    //var times = ReactDOM.findDOMNode("calendar.js").getElementsByClassName("Red");
+    var times = document.getElementsByClassName("rec");
+
+    for (var i = 0; i < times.length; i++) {
+      if (document.getElementById('play1').checked)
+        times[i].style.display = 'none';
+      else
+        times[i].style.display = 'block';
+    }
+  }
+
+
   render() {
+    const styles = {
+
+      head: {
+        textAlign: 'center',
+        color: 'white',
+        height: '50px',
+        width: '200px',
+        paddingTop: '13px',
+        borderTopLeftRadius: '10px',
+        borderTopRightRadius: '10px',
+        background: '#414141',
+        marginBottom: '0px',
+        lineHeight: '20px',
+
+        webkitUserSelect: 'none',
+        mozUserSelect: 'none',
+        msUserSelect: 'none',
+        userSelect: 'none',
+      },
+
+      content: {
+        display: 'block',
+        position: 'absolute',
+        verticalAlign: 'center',
+        fontSize: '18px',
+        lineHeight: '22px',
+        width: '200px',
+        paddingLeft: '20px',
+        paddingTop: '15px',
+        paddingBottom: '20px',
+        marginTop: '0px',
+        borderColor: 'Red',
+        borderBottomLeftRadius: '10px',
+        borderBottomRightRadius: '10px',
+        background: '#E6E6E6',
+        zIndex: '-1',
+
+        webkitUserSelect: 'none',
+        mozUserSelect: 'none',
+        msUserSelect: 'none',
+        userSelect: 'none',
+      },
+      rec: {
+        display: 'block',
+        height: '10px',
+        outline: 'solid',
+      },
+      break: { display: 'block', margin: '3px' },
+
+      child1: {
+        width: '80%',
+        float: 'left',
+        paddingLeft: '20px',
+        
+      }  ,
+      child2: {
+        width: '20%',
+        float: 'left',
+        paddingTop: '75px',
+        paddingLeft: '90px',
+      } 
+    }
     return (
       <>
-        <Container fluid >
-          <Row>
-            <Col style={{ fontSize: 45, textAlign: 'center', backgroundColor: '#AB0032', borderTopRightRadius: 25, borderTopLeftRadius: 25, color: 'white' }}>FEB 14 - 20</Col>
-          </Row>
-          <Row style={{ borderStyle: 'solid' }}>
-            <Col sm={1}>
-              <Row style={{ borderBottom: 'solid', textDecoration: 'underline' }}>Time</Row>
-              <Row style={{ borderBottom: 'solid' }}>3:00</Row>
-              <Row style={{ borderBottom: 'solid' }}>3:30</Row>
-              <Row style={{ borderBottom: 'solid' }}>4:00</Row>
-              <Row style={{ borderBottom: 'solid' }}>4:30</Row>
-              <Row style={{ borderBottom: 'solid' }}>5:00</Row>
-              <Row style={{ borderBottom: 'solid' }}>5:30</Row>
-              <Row style={{ borderBottom: 'solid' }}>6:00</Row>
-              <Row style={{ borderBottom: 'solid' }}>6:30</Row>
-              <Row style={{ borderBottom: 'solid' }}>7:00</Row>
-              <Row style={{ borderBottom: 'solid' }}>7:30</Row>
-              <Row style={{ borderBottom: 'solid' }}>8:00</Row>
-              <Row style={{ borderBottom: 'solid' }}>8:30</Row>
-              <Row style={{ borderBottom: 'solid' }}>9:00</Row>
-              <Row >9:30</Row>
-            </Col>
-            <Col style={{ borderLeft: 'solid' }}>
-              <Row style={{ textDecoration: 'underline', paddingLeft: 7  }}>Sunday 14</Row>
+      <Container fluid >  
+        <div style={styles.child1}>
+          
+            <Row>
+              <Col style={{ fontSize: 45, textAlign: 'center', backgroundColor: '#AB0032', borderTopRightRadius: 25, borderTopLeftRadius: 25, color: 'white' }}>FEB 14 - 20</Col>
+            </Row>
+            <Row style={{ borderStyle: 'solid' }}>
+              <Col sm={1}>
+                <Row style={{ borderBottom: 'solid', textDecoration: 'underline' }}>Time</Row>
+                <Row style={{ borderBottom: 'solid' }}>3:00</Row>
+                <Row style={{ borderBottom: 'solid' }}>3:30</Row>
+                <Row style={{ borderBottom: 'solid' }}>4:00</Row>
+                <Row style={{ borderBottom: 'solid' }}>4:30</Row>
+                <Row style={{ borderBottom: 'solid' }}>5:00</Row>
+                <Row style={{ borderBottom: 'solid' }}>5:30</Row>
+                <Row style={{ borderBottom: 'solid' }}>6:00</Row>
+                <Row style={{ borderBottom: 'solid' }}>6:30</Row>
+                <Row style={{ borderBottom: 'solid' }}>7:00</Row>
+                <Row style={{ borderBottom: 'solid' }}>7:30</Row>
+                <Row style={{ borderBottom: 'solid' }}>8:00</Row>
+                <Row style={{ borderBottom: 'solid' }}>8:30</Row>
+                <Row style={{ borderBottom: 'solid' }}>9:00</Row>
+                <Row >9:30</Row>
+              </Col>
+              <Col style={{ borderLeft: 'solid' }}>
+                <Row style={{ textDecoration: 'underline', paddingLeft: 7 }}>Sunday 14</Row>
 
-            </Col>
-            <Col style={{ borderLeft: 'solid' }}>
-              <Row style={{ textDecoration: 'underline', paddingLeft: 7  }}>Monday 15</Row>
-              <Row style={{ paddingLeft: 5 }} className="Orange"><Button style={{ height: 110, width: 175, backgroundColor: '#ffa640' }} onClick={this.toggleHidden1.bind(this)} >3:00-5:00</Button></Row>
-              <Row style={{ paddingLeft: 5, paddingTop: 75 }} className="Blue"><Button style={{ height: 75, width: 175, backgroundColor: '#5f6fff' }} onClick={this.toggleHidden3.bind(this)} >6:30-8:00</Button></Row>
-            </Col>
-            <Col style={{ borderLeft: 'solid' }}>
-              <Row style={{ textDecoration: 'underline', paddingLeft: 7  }}>Tuesday 16</Row>
-              <Row style={{ paddingLeft: 5, paddingTop: 100 }} className="Orange"><Button style={{ height: 110, width: 175, backgroundColor: '#ffa640' }} onClick={this.toggleHidden2.bind(this)}>5:00-7:00</Button> </Row>
-              <Row style={{ paddingLeft: 5, paddingTop: 65 }} className="Red"><Button style={{ height: 75, width: 175, backgroundColor: '#ff4b4b' }} onClick={this.toggleHidden4.bind(this)} >8:00-9:00</Button></Row>
-            </Col>
-            <Col style={{ borderLeft: 'solid' }}>
-              <Row style={{ textDecoration: 'underline', paddingLeft: 7  }}>Wednesday 17</Row>
-              <Row style={{ paddingLeft: 5, paddingTop: 15 }} className="Green"><Button style={{ height: 55, width: 175, backgroundColor: '#50c54c' }} onClick={this.toggleHidden5.bind(this)} >3:15-4:00</Button></Row>
-              <Row style={{ paddingLeft: 5, paddingTop: 213 }} className="Red"><Button style={{ height: 65, width: 175, backgroundColor: '#5f6fff' }} onClick={this.toggleHidden6.bind(this)} >8:15-9:00</Button></Row>
+              </Col>
+              <Col style={{ borderLeft: 'solid' }}>
+                <Row style={{ textDecoration: 'underline', paddingLeft: 7 }}>Monday 15</Row>
+                <Row style={{ paddingLeft: 5 }} className="Orange"><Button style={{ height: 110, width: 175, backgroundColor: '#ffa640' }} onClick={this.toggleHidden1.bind(this)} >3:00-5:00</Button></Row>
+                <Row style={{ paddingLeft: 5, paddingTop: 75 }} className="Blue"><Button style={{ height: 75, width: 175, backgroundColor: '#5f6fff' }} onClick={this.toggleHidden3.bind(this)} >6:30-8:00</Button></Row>
+              </Col>
+              <Col style={{ borderLeft: 'solid' }}>
+                <Row style={{ textDecoration: 'underline', paddingLeft: 7 }}>Tuesday 16</Row>
+                <Row style={{ paddingLeft: 5, paddingTop: 100 }} className="Orange"><Button style={{ height: 110, width: 175, backgroundColor: '#ffa640' }} onClick={this.toggleHidden2.bind(this)}>5:00-7:00</Button> </Row>
+                <Row style={{ paddingLeft: 5, paddingTop: 65 }} className="Red"><Button style={{ height: 75, width: 175, backgroundColor: '#ff4b4b' }} onClick={this.toggleHidden4.bind(this)} >8:00-9:00</Button></Row>
+              </Col>
+              <Col style={{ borderLeft: 'solid' }}>
+                <Row style={{ textDecoration: 'underline', paddingLeft: 7 }}>Wednesday 17</Row>
+                <Row style={{ paddingLeft: 5, paddingTop: 15 }} className="Green"><Button style={{ height: 55, width: 175, backgroundColor: '#50c54c' }} onClick={this.toggleHidden5.bind(this)} >3:15-4:00</Button></Row>
+                <Row style={{ paddingLeft: 5, paddingTop: 213 }} className="Red"><Button style={{ height: 65, width: 175, backgroundColor: '#5f6fff' }} onClick={this.toggleHidden6.bind(this)} >8:15-9:00</Button></Row>
 
-            </Col>
-            <Col style={{ borderLeft: 'solid', }}>
-              <Row style={{ textDecoration: 'underline', paddingLeft: 7  }}>Thursday 18</Row>
-              <Row style={{ paddingLeft: 5, paddingTop: 60 }} className="Red"><Button style={{ height: 100, width: 175, backgroundColor: '#ff4b4b' }} onClick={this.toggleHidden7.bind(this)} >4:15-6:00</Button></Row>
-              <Row style={{ paddingLeft: 5, paddingTop: 70 }} className="Green"><Button style={{ height: 85, width: 175, backgroundColor: '#50c54c' }} onClick={this.toggleHidden8.bind(this)} >7:00-8:45</Button></Row>
+              </Col>
+              <Col style={{ borderLeft: 'solid', }}>
+                <Row style={{ textDecoration: 'underline', paddingLeft: 7 }}>Thursday 18</Row>
+                <Row style={{ paddingLeft: 5, paddingTop: 60 }} className="Red"><Button style={{ height: 100, width: 175, backgroundColor: '#ff4b4b' }} onClick={this.toggleHidden7.bind(this)} >4:15-6:00</Button></Row>
+                <Row style={{ paddingLeft: 5, paddingTop: 70 }} className="Green"><Button style={{ height: 85, width: 175, backgroundColor: '#50c54c' }} onClick={this.toggleHidden8.bind(this)} >7:00-8:45</Button></Row>
 
-            </Col>
-            <Col style={{ borderLeft: 'solid' }}>
-              <Row style={{ textDecoration: 'underline', paddingLeft: 7 }}>Friday 19</Row>
-              <Row style={{ paddingLeft: 5, paddingTop: 75 }} className="Blue"><Button style={{ height: 125, width: 175, backgroundColor: '#5f6fff' }} onClick={this.toggleHidden9.bind(this)} >4:30-7:00</Button></Row>
-            </Col>
+              </Col>
+              <Col style={{ borderLeft: 'solid' }}>
+                <Row style={{ textDecoration: 'underline', paddingLeft: 7 }}>Friday 19</Row>
+                <Row style={{ paddingLeft: 5, paddingTop: 75 }} className="Blue"><Button style={{ height: 125, width: 175, backgroundColor: '#5f6fff' }} onClick={this.toggleHidden9.bind(this)} >4:30-7:00</Button></Row>
+              </Col>
 
-            <Col style={{ borderLeft: 'solid' }}>
-              <Row style={{ textDecoration: 'underline', paddingLeft: 7 }}>Saturday 20</Row>
-            </Col>
-          </Row>
+              <Col style={{ borderLeft: 'solid' }}>
+                <Row style={{ textDecoration: 'underline', paddingLeft: 7 }}>Saturday 20</Row>
+              </Col>
+            </Row>
+            
+        </div >
 
+
+          <div style={styles.child2}>
+            <div>
+              <h2 style={styles.head}>Events</h2>
+              
+              <div style={styles.content}>
+                <div class="checkbox1">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="play1" onClick={this.uncheckMyEvents} />
+                    <label class="custom-control-label" for="play1">Play 1 ⠀⠀⠀⠀⠀⭐</label>
+                  </div> <br style={styles.break}></br>
+                </div>
+                <div class="checkbox2">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" value='test' id="play2" onClick={this.uncheckMyEvents} />
+                    <label class="custom-control-label" for="play2">Play 2</label>
+                  </div>
+                </div> <br style={styles.break}></br>
+                <div class="checkbox3">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="play3" onClick={this.uncheckMyEvents} />
+                    <label class="custom-control-label" for="play3">Play 3 ⠀⠀⠀⠀⠀⭐</label>
+                  </div>
+                </div> <br style={styles.break}></br>
+                <div class="checkbox4">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="play4" onClick={this.uncheckMyEvents} />
+                    <label class="custom-control-label" for="play4">Play 4</label>
+                  </div>
+                </div> <br style={styles.break}></br>
+                <div class="checkbox5">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="myPlays" onClick={this.toggleAll} />
+                    <label class="custom-control-label" for="myPlays">My Events ⠀⠀⭐</label>
+                  </div>
+                </div> <br style={styles.break}></br>
+              </div>
+            </div>
+
+
+          </div>
         </Container>
-
         {!this.state.isHidden1 && <div style={{ marginTop: 50 }} >
           <Container >
             <Form style={{ backgroundColor: "#ffa640", borderRadius: 25, width: 900 }}>
@@ -504,3 +641,5 @@ class Calendar extends React.Component {
 
 
 export default Calendar;
+
+
