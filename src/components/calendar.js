@@ -91,7 +91,7 @@ class Calendar extends React.Component {
       <>
         <Container fluid >
           <Row>
-            <Col style={{ fontSize: 45, textAlign: 'center', backgroundColor: '#AB0032', borderTopRightRadius: 25, borderTopLeftRadius: 25, color: 'white'}}>FEB 14 - 20</Col>
+            <Col style={{ fontSize: 45, textAlign: 'center', backgroundColor: '#AB0032', borderTopRightRadius: 25, borderTopLeftRadius: 25, color: 'white' }}>FEB 14 - 20</Col>
           </Row>
           <Row style={{ borderStyle: 'solid' }}>
             <Col sm={1}>
@@ -112,34 +112,39 @@ class Calendar extends React.Component {
               <Row >9:30</Row>
             </Col>
             <Col style={{ borderLeft: 'solid' }}>
-              <Row style={{ textDecoration: 'underline' }}>Sunday 14</Row>
+              <Row style={{ textDecoration: 'underline', paddingLeft: 7  }}>Sunday 14</Row>
 
             </Col>
             <Col style={{ borderLeft: 'solid' }}>
-              <Row style={{ textDecoration: 'underline' }}>Monday 15</Row>
+              <Row style={{ textDecoration: 'underline', paddingLeft: 7  }}>Monday 15</Row>
               <Row style={{ paddingLeft: 5 }} className="Orange"><Button style={{ height: 110, width: 175, backgroundColor: '#ffa640' }} onClick={this.toggleHidden1.bind(this)} >3:00-5:00</Button></Row>
               <Row style={{ paddingLeft: 5, paddingTop: 75 }} className="Blue"><Button style={{ height: 75, width: 175, backgroundColor: '#5f6fff' }} onClick={this.toggleHidden3.bind(this)} >6:30-8:00</Button></Row>
             </Col>
             <Col style={{ borderLeft: 'solid' }}>
-              <Row style={{ textDecoration: 'underline' }}>Tuesday 16</Row>
+              <Row style={{ textDecoration: 'underline', paddingLeft: 7  }}>Tuesday 16</Row>
               <Row style={{ paddingLeft: 5, paddingTop: 100 }} className="Orange"><Button style={{ height: 110, width: 175, backgroundColor: '#ffa640' }} onClick={this.toggleHidden2.bind(this)}>5:00-7:00</Button> </Row>
               <Row style={{ paddingLeft: 5, paddingTop: 65 }} className="Red"><Button style={{ height: 75, width: 175, backgroundColor: '#ff4b4b' }} onClick={this.toggleHidden4.bind(this)} >8:00-9:00</Button></Row>
             </Col>
-            <Col style={{ borderLeft: 'solid', textDecoration: 'underline' }}>Wednesday 17
-            <Row style={{ paddingLeft: 5, paddingTop: 15 }} className="Green"><Button style={{ height: 55, width: 175, backgroundColor: '#50c54c' }} onClick={this.toggleHidden5.bind(this)} >3:15-4:00</Button></Row>
+            <Col style={{ borderLeft: 'solid' }}>
+              <Row style={{ textDecoration: 'underline', paddingLeft: 7  }}>Wednesday 17</Row>
+              <Row style={{ paddingLeft: 5, paddingTop: 15 }} className="Green"><Button style={{ height: 55, width: 175, backgroundColor: '#50c54c' }} onClick={this.toggleHidden5.bind(this)} >3:15-4:00</Button></Row>
               <Row style={{ paddingLeft: 5, paddingTop: 213 }} className="Red"><Button style={{ height: 65, width: 175, backgroundColor: '#5f6fff' }} onClick={this.toggleHidden6.bind(this)} >8:15-9:00</Button></Row>
 
             </Col>
-            <Col style={{ borderLeft: 'solid', textDecoration: 'underline' }}>Thursday 18
-            <Row style={{ paddingLeft: 5, paddingTop: 60 }} className="Red"><Button style={{ height: 100, width: 175, backgroundColor: '#ff4b4b' }} onClick={this.toggleHidden7.bind(this)} >4:15-6:00</Button></Row>
+            <Col style={{ borderLeft: 'solid', }}>
+              <Row style={{ textDecoration: 'underline', paddingLeft: 7  }}>Thursday 18</Row>
+              <Row style={{ paddingLeft: 5, paddingTop: 60 }} className="Red"><Button style={{ height: 100, width: 175, backgroundColor: '#ff4b4b' }} onClick={this.toggleHidden7.bind(this)} >4:15-6:00</Button></Row>
               <Row style={{ paddingLeft: 5, paddingTop: 70 }} className="Green"><Button style={{ height: 85, width: 175, backgroundColor: '#50c54c' }} onClick={this.toggleHidden8.bind(this)} >7:00-8:45</Button></Row>
 
             </Col>
-            <Col style={{ borderLeft: 'solid', textDecoration: 'underline' }}>Friday 19
-            <Row style={{ paddingLeft: 5, paddingTop: 75 }} className="Blue"><Button style={{ height: 125, width: 175, backgroundColor: '#5f6fff' }} onClick={this.toggleHidden9.bind(this)} >4:30-7:00</Button></Row>
+            <Col style={{ borderLeft: 'solid' }}>
+              <Row style={{ textDecoration: 'underline', paddingLeft: 7 }}>Friday 19</Row>
+              <Row style={{ paddingLeft: 5, paddingTop: 75 }} className="Blue"><Button style={{ height: 125, width: 175, backgroundColor: '#5f6fff' }} onClick={this.toggleHidden9.bind(this)} >4:30-7:00</Button></Row>
             </Col>
 
-            <Col style={{ borderLeft: 'solid', textDecoration: 'underline' }}>Saturday 20</Col>
+            <Col style={{ borderLeft: 'solid' }}>
+              <Row style={{ textDecoration: 'underline', paddingLeft: 7 }}>Saturday 20</Row>
+            </Col>
           </Row>
 
         </Container>
@@ -425,7 +430,7 @@ class Calendar extends React.Component {
         </div>
         }
 
-{!this.state.isHidden9 && <div style={{ marginTop: 50 }} >
+        {!this.state.isHidden9 && <div style={{ marginTop: 50 }} >
           <Container >
             <Form style={{ backgroundColor: "#5f6fff", borderRadius: 25, width: 900 }}>
               <Form.Group style={{ paddingLeft: 35 }}>
