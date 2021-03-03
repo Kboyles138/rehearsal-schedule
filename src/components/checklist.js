@@ -1,18 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import './checklist.css';
-import Calndar from './calendar.js';
+import Calendar from './calendar.js';
 
 const mdbreact = require('mdbreact'); const { MDBInput } = mdbreact;
 class Checklist extends React.Component {
 
     //Step 1: make a checkbox print something
-    constructor(props) {
+    /*constructor(props) {
         super(props);
         this.handleShow = this.handleShow.bind(this);
         this.handleHide = this.handleHide.bind(this);
 
-    }
+    }*/
     toggleAll(){
         if (document.getElementById('myPlays').checked) 
         {
@@ -102,7 +102,7 @@ class Checklist extends React.Component {
         }
 
         return( 
-        <div>
+        <Child2>
             <div>
                 <h2 style={styles.head}>Events</h2>
                 <div class="Play1">
@@ -146,7 +146,7 @@ class Checklist extends React.Component {
             </div>
 
 
-        </div>
+        </Child2>
         );
     }
 }
