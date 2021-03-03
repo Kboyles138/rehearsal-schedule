@@ -1,6 +1,6 @@
 import logo from './wildcat.png';
 import './App.css';
-import Checklist from './components/checklist';
+
 import NewEventForm from './components/neweventform';
 import Calendar from './components/calendar';
 import GlobalStyle from './styles/Global';

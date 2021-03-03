@@ -102,7 +102,7 @@ class Checklist extends React.Component {
         }
 
         return( 
-        <Child2>
+        <div>
             <div>
                 <h2 style={styles.head}>Events</h2>
                 <div class="Play1">
@@ -146,7 +146,7 @@ class Checklist extends React.Component {
             </div>
 
 
-        </Child2>
+        </div>
         );
     }
 }
