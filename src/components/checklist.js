@@ -114,26 +114,26 @@ class Checklist extends React.Component {
                 <div style={styles.content}>
                     <div class="checkbox1">
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="play1" onClick={this.uncheckMyEvents}/>
-                            <label class="custom-control-label" for="play1">Play 1 ⠀⠀⠀⠀⠀⭐</label>
+                            <input type="checkbox" class="custom-control-input" id="Macbeth" onClick={this.uncheckMyEvents}/>
+                            <label class="custom-control-label" for="Macbeth">Play 1 ⠀⠀⠀⠀⠀⭐</label>
                         </div> <br style={styles.break}></br>
                     </div>
                     <div class="checkbox2">
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" value='test' id="play2" onClick={this.uncheckMyEvents}/>
-                            <label class="custom-control-label" for="play2">Play 2</label>
+                            <input type="checkbox" class="custom-control-input" value='test' id="Hamlet" onClick={this.uncheckMyEvents}/>
+                            <label class="custom-control-label" for="Hamlet">Play 2</label>
                         </div>
                     </div> <br style={styles.break}></br>
                     <div class="checkbox3">
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="play3" onClick={this.uncheckMyEvents}/>
-                            <label class="custom-control-label" for="play3">Play 3 ⠀⠀⠀⠀⠀⭐</label>
+                            <input type="checkbox" class="custom-control-input" id="Romeo & Juliet" onClick={this.uncheckMyEvents}/>
+                            <label class="custom-control-label" for="Romeo & Juliet">Play 3 ⠀⠀⠀⠀⠀⭐</label>
                         </div>
                     </div> <br style={styles.break}></br>
                     <div class="checkbox4">
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="play4" onClick={this.uncheckMyEvents}/>
-                            <label class="custom-control-label" for="play4">Play 4</label>
+                            <input type="checkbox" class="custom-control-input" id="Twelth Night" onClick={this.uncheckMyEvents}/>
+                            <label class="custom-control-label" for="Twelth Night">Play 4</label>
                         </div>
                     </div> <br style={styles.break}></br>
                     <div class="checkbox5">
