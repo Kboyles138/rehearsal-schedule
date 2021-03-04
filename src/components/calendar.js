@@ -393,7 +393,7 @@ class Calendar extends React.Component {
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>People: </Form.Label>
-                    <Form.Text style={{ paddingLeft: 40 }}>FILLER </Form.Text>
+                    <Form.Text style={{ paddingLeft: 40 }}> Test </Form.Text>
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>Details: </Form.Label>
