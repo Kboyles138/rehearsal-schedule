@@ -95,28 +95,110 @@ class Calendar extends React.Component {
       document.getElementById('play2').checked = false;
       document.getElementById('play3').checked = true;
       document.getElementById('play4').checked = false;
+      var times = document.getElementsByClassName("play1");
+      for (var i = 0; i < times.length; i++) {
+        if (document.getElementById('play1').checked)
+          times[i].style.visibility = 'visible';
+        else
+          times[i].style.visibility = 'hidden';
+      }
+      times = document.getElementsByClassName("play2");
+      for (var i = 0; i < times.length; i++) {
+        if (document.getElementById('play2').checked)
+          times[i].style.visibility = 'visible';
+        else
+          times[i].style.visibility = 'hidden';
+      }
+      times = document.getElementsByClassName("play3");
+      for (var i = 0; i < times.length; i++) {
+        if (document.getElementById('play3').checked)
+          times[i].style.visibility = 'visible';
+        else
+          times[i].style.visibility = 'hidden';
+      }
+      times = document.getElementsByClassName("play4");
+      for (var i = 0; i < times.length; i++) {
+        if (document.getElementById('play4').checked)
+          times[i].style.visibility = 'visible';
+        else
+          times[i].style.visibility = 'hidden';
+      }
     } else {
       document.getElementById('play1').checked = false;
       document.getElementById('play2').checked = false;
       document.getElementById('play3').checked = false;
       document.getElementById('play4').checked = false;
+      var times = document.getElementsByClassName("play1");
+      for (var i = 0; i < times.length; i++) {
+        if (document.getElementById('play1').checked)
+          times[i].style.visibility = 'visible';
+        else
+          times[i].style.visibility = 'hidden';
+      }
+      times = document.getElementsByClassName("play2");
+      for (var i = 0; i < times.length; i++) {
+        if (document.getElementById('play2').checked)
+          times[i].style.visibility = 'visible';
+        else
+          times[i].style.visibility = 'hidden';
+      }
+      times = document.getElementsByClassName("play3");
+      for (var i = 0; i < times.length; i++) {
+        if (document.getElementById('play3').checked)
+          times[i].style.visibility = 'visible';
+        else
+          times[i].style.visibility = 'hidden';
+      }
+      times = document.getElementsByClassName("play4");
+      for (var i = 0; i < times.length; i++) {
+        if (document.getElementById('play4').checked)
+          times[i].style.visibility = 'visible';
+        else
+          times[i].style.visibility = 'hidden';
+      }
     }
   }
 
 
-  uncheckMyEvents() {
+  handleCheck1() {
     document.getElementById('myPlays').checked = false;
-    //var times = ReactDOM.findDOMNode("calendar.js").getElementsByClassName("Red");
-    var times = document.getElementsByClassName("rec");
-
+    var times = document.getElementsByClassName("play1");
     for (var i = 0; i < times.length; i++) {
       if (document.getElementById('play1').checked)
-        times[i].style.display = 'none';
+        times[i].style.visibility = 'visible';
       else
-        times[i].style.display = 'block';
+        times[i].style.visibility = 'hidden';
     }
   }
-
+  handleCheck2() {
+    document.getElementById('myPlays').checked = false;
+    var times = document.getElementsByClassName("play2");
+    for (var i = 0; i < times.length; i++) {
+      if (document.getElementById('play2').checked)
+        times[i].style.visibility = 'visible';
+      else
+        times[i].style.visibility = 'hidden';
+    }
+  }  
+  handleCheck3() {
+    document.getElementById('myPlays').checked = false;
+    var times = document.getElementsByClassName("play3");
+    for (var i = 0; i < times.length; i++) {
+      if (document.getElementById('play3').checked)
+        times[i].style.visibility = 'visible';
+      else
+        times[i].style.visibility = 'hidden';
+    }
+  }  handleCheck4() {
+    document.getElementById('myPlays').checked = false;
+    var times = document.getElementsByClassName("play4");
+    for (var i = 0; i < times.length; i++) {
+      if (document.getElementById('play4').checked)
+        times[i].style.visibility = 'visible';
+      else
+        times[i].style.visibility = 'hidden';
+    }
+  }
 
   render() {
     const styles = {
@@ -213,29 +295,29 @@ class Calendar extends React.Component {
               </Col>
               <Col style={{ borderLeft: 'solid' }}>
                 <Row style={{ textDecoration: 'underline', paddingLeft: 7 }}>Monday 15</Row>
-                <Row style={{ paddingLeft: 5 }} className="Orange"><Button style={{ height: 110, width: 175, backgroundColor: '#ffa640' }} onClick={this.toggleHidden1.bind(this)} >3:00-5:00</Button></Row>
-                <Row style={{ paddingLeft: 5, paddingTop: 75 }} className="Blue"><Button style={{ height: 75, width: 175, backgroundColor: '#5f6fff' }} onClick={this.toggleHidden3.bind(this)} >6:30-8:00</Button></Row>
+                <Row style={{ paddingLeft: 5}} className="play1"><Button style={{ height: 110, width: 175, backgroundColor: '#ffa640' }} onClick={this.toggleHidden1.bind(this)} >3:00-5:00</Button></Row>
+                <Row style={{ paddingLeft: 5, paddingTop: 75, visibility:'hidden'}} className="play2"><Button style={{ height: 75, width: 175, backgroundColor: '#5f6fff' }} onClick={this.toggleHidden3.bind(this)} >6:30-8:00</Button></Row>
               </Col>
               <Col style={{ borderLeft: 'solid' }}>
                 <Row style={{ textDecoration: 'underline', paddingLeft: 7 }}>Tuesday 16</Row>
-                <Row style={{ paddingLeft: 5, paddingTop: 100 }} className="Orange"><Button style={{ height: 110, width: 175, backgroundColor: '#ffa640' }} onClick={this.toggleHidden2.bind(this)}>5:00-7:00</Button> </Row>
-                <Row style={{ paddingLeft: 5, paddingTop: 65 }} className="Red"><Button style={{ height: 75, width: 175, backgroundColor: '#ff4b4b' }} onClick={this.toggleHidden4.bind(this)} >8:00-9:00</Button></Row>
+                <Row style={{ paddingLeft: 5, paddingTop: 100 }} className="play1"><Button style={{ height: 110, width: 175, backgroundColor: '#ffa640' }} onClick={this.toggleHidden2.bind(this)}>5:00-7:00</Button> </Row>
+                <Row style={{ paddingLeft: 5, paddingTop: 65 }} className="play3"><Button style={{ height: 75, width: 175, backgroundColor: '#ff4b4b' }} onClick={this.toggleHidden4.bind(this)} >8:00-9:00</Button></Row>
               </Col>
               <Col style={{ borderLeft: 'solid' }}>
                 <Row style={{ textDecoration: 'underline', paddingLeft: 7 }}>Wednesday 17</Row>
-                <Row style={{ paddingLeft: 5, paddingTop: 15 }} className="Green"><Button style={{ height: 55, width: 175, backgroundColor: '#50c54c' }} onClick={this.toggleHidden5.bind(this)} >3:15-4:00</Button></Row>
-                <Row style={{ paddingLeft: 5, paddingTop: 213 }} className="Red"><Button style={{ height: 65, width: 175, backgroundColor: '#5f6fff' }} onClick={this.toggleHidden6.bind(this)} >8:15-9:00</Button></Row>
+                <Row style={{ paddingLeft: 5, paddingTop: 15, visibility:'hidden'}} className="play4"><Button style={{ height: 55, width: 175, backgroundColor: '#50c54c' }} onClick={this.toggleHidden5.bind(this)} >3:15-4:00</Button></Row>
+                <Row style={{ paddingLeft: 5, paddingTop: 213, visibility:'hidden'}} className="play2"><Button style={{ height: 65, width: 175, backgroundColor: '#5f6fff' }} onClick={this.toggleHidden6.bind(this)} >8:15-9:00</Button></Row>
 
               </Col>
               <Col style={{ borderLeft: 'solid', }}>
                 <Row style={{ textDecoration: 'underline', paddingLeft: 7 }}>Thursday 18</Row>
-                <Row style={{ paddingLeft: 5, paddingTop: 60 }} className="Red"><Button style={{ height: 100, width: 175, backgroundColor: '#ff4b4b' }} onClick={this.toggleHidden7.bind(this)} >4:15-6:00</Button></Row>
-                <Row style={{ paddingLeft: 5, paddingTop: 70 }} className="Green"><Button style={{ height: 85, width: 175, backgroundColor: '#50c54c' }} onClick={this.toggleHidden8.bind(this)} >7:00-8:45</Button></Row>
+                <Row style={{ paddingLeft: 5, paddingTop: 60 }} className="play3"><Button style={{ height: 100, width: 175, backgroundColor: '#ff4b4b' }} onClick={this.toggleHidden7.bind(this)} >4:15-6:00</Button></Row>
+                <Row style={{ paddingLeft: 5, paddingTop: 70, visibility:'hidden'}} className="play4"><Button style={{ height: 85, width: 175, backgroundColor: '#50c54c' }} onClick={this.toggleHidden8.bind(this)} >7:00-8:45</Button></Row>
 
               </Col>
               <Col style={{ borderLeft: 'solid' }}>
                 <Row style={{ textDecoration: 'underline', paddingLeft: 7 }}>Friday 19</Row>
-                <Row style={{ paddingLeft: 5, paddingTop: 75 }} className="Blue"><Button style={{ height: 125, width: 175, backgroundColor: '#5f6fff' }} onClick={this.toggleHidden9.bind(this)} >4:30-7:00</Button></Row>
+                <Row style={{ paddingLeft: 5, paddingTop: 75, visibility:'hidden'}} className="play2"><Button style={{ height: 125, width: 175, backgroundColor: '#5f6fff' }} onClick={this.toggleHidden9.bind(this)} >4:30-7:00</Button></Row>
               </Col>
 
               <Col style={{ borderLeft: 'solid' }}>
@@ -252,31 +334,31 @@ class Calendar extends React.Component {
               <div style={styles.content}>
                 <div class="checkbox1">
                   <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="play1" onClick={this.uncheckMyEvents} />
+                    <input type="checkbox" class="custom-control-input" id="play1" onClick={this.handleCheck1} defaultChecked/>
                     <label class="custom-control-label" for="play1">Play 1 ⠀⠀⠀⠀⠀⭐</label>
                   </div> <br style={styles.break}></br>
                 </div>
                 <div class="checkbox2">
                   <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" value='test' id="play2" onClick={this.uncheckMyEvents} />
+                    <input type="checkbox" class="custom-control-input" value='test' id="play2" onClick={this.handleCheck2} />
                     <label class="custom-control-label" for="play2">Play 2</label>
                   </div>
                 </div> <br style={styles.break}></br>
                 <div class="checkbox3">
                   <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="play3" onClick={this.uncheckMyEvents} />
+                    <input type="checkbox" class="custom-control-input" id="play3" onClick={this.handleCheck3} defaultChecked/>
                     <label class="custom-control-label" for="play3">Play 3 ⠀⠀⠀⠀⠀⭐</label>
                   </div>
                 </div> <br style={styles.break}></br>
                 <div class="checkbox4">
                   <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="play4" onClick={this.uncheckMyEvents} />
+                    <input type="checkbox" class="custom-control-input" id="play4" onClick={this.handleCheck4} />
                     <label class="custom-control-label" for="play4">Play 4</label>
                   </div>
                 </div> <br style={styles.break}></br>
                 <div class="checkbox5">
                   <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="myPlays" onClick={this.toggleAll} />
+                    <input type="checkbox" class="custom-control-input" id="myPlays" onClick={this.toggleAll} defaultChecked/>
                     <label class="custom-control-label" for="myPlays">My Events ⠀⠀⭐</label>
                   </div>
                 </div> <br style={styles.break}></br>
