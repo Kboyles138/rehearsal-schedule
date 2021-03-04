@@ -335,25 +335,25 @@ class Calendar extends React.Component {
                 <div class="checkbox1">
                   <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="play1" onClick={this.handleCheck1} defaultChecked/>
-                    <label class="custom-control-label" for="play1">Play 1 ⠀⠀⠀⠀⠀⭐</label>
+                    <label class="custom-control-label" for="play1">Macbeth ⠀⠀⠀⠀⠀⭐</label>
                   </div> <br style={styles.break}></br>
                 </div>
                 <div class="checkbox2">
                   <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" value='test' id="play2" onClick={this.handleCheck2} />
-                    <label class="custom-control-label" for="play2">Play 2</label>
+                    <label class="custom-control-label" for="play2">Hamlet</label>
                   </div>
                 </div> <br style={styles.break}></br>
                 <div class="checkbox3">
                   <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="play3" onClick={this.handleCheck3} defaultChecked/>
-                    <label class="custom-control-label" for="play3">Play 3 ⠀⠀⠀⠀⠀⭐</label>
+                    <label class="custom-control-label" for="play3">Romeo & Juliet ⠀⠀⠀⠀⠀⭐</label>
                   </div>
                 </div> <br style={styles.break}></br>
                 <div class="checkbox4">
                   <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="play4" onClick={this.handleCheck4} />
-                    <label class="custom-control-label" for="play4">Play 4</label>
+                    <label class="custom-control-label" for="play4">Twelth Night</label>
                   </div>
                 </div> <br style={styles.break}></br>
                 <div class="checkbox5">
@@ -389,15 +389,15 @@ class Calendar extends React.Component {
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>Play:  </Form.Label>
-                    <Form.Text style={{ paddingLeft: 60 }}> Play 1 </Form.Text>
+                    <Form.Text style={{ paddingLeft: 60 }}> Macbeth </Form.Text>
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>People: </Form.Label>
-                    <Form.Text style={{ paddingLeft: 40 }}> Test </Form.Text>
+                    <Form.Text style={{ paddingLeft: 40 }}> Sarah Scarlett, Penny Purple </Form.Text>
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>Details: </Form.Label>
-                    <Form.Text style={{ paddingLeft: 39 }}> FILLER </Form.Text>
+                    <Form.Text style={{ paddingLeft: 39 }}> Scheduled in Room 1 </Form.Text>
                   </Form.Row>
                 </Form.Group>
               </Form>
@@ -424,15 +424,15 @@ class Calendar extends React.Component {
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>Play:  </Form.Label>
-                    <Form.Text style={{ paddingLeft: 60 }}> Play 1 </Form.Text>
+                    <Form.Text style={{ paddingLeft: 60 }}> Macbeth </Form.Text>
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>People: </Form.Label>
-                    <Form.Text style={{ paddingLeft: 40 }}>FILLER </Form.Text>
+                    <Form.Text style={{ paddingLeft: 40 }}> Sarah Scarlett, Penny Purple </Form.Text>
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>Details: </Form.Label>
-                    <Form.Text style={{ paddingLeft: 39 }}> FILLER </Form.Text>
+                    <Form.Text style={{ paddingLeft: 39 }}> Scheduled in Room 1 </Form.Text>
                   </Form.Row>
                 </Form.Group>
               </Form>
@@ -459,15 +459,15 @@ class Calendar extends React.Component {
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>Play:  </Form.Label>
-                    <Form.Text style={{ paddingLeft: 60 }}> Play 2 </Form.Text>
+                    <Form.Text style={{ paddingLeft: 60 }}> Hamlet </Form.Text>
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>People: </Form.Label>
-                    <Form.Text style={{ paddingLeft: 40 }}>FILLER </Form.Text>
+                    <Form.Text style={{ paddingLeft: 40 }}> Walter White, Gary Green, Mary Magenta </Form.Text>
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>Details: </Form.Label>
-                    <Form.Text style={{ paddingLeft: 39 }}> FILLER </Form.Text>
+                    <Form.Text style={{ paddingLeft: 39 }}> Scheduled in Room 2 Dance shoes required </Form.Text>
                   </Form.Row>
                 </Form.Group>
               </Form>
@@ -494,15 +494,15 @@ class Calendar extends React.Component {
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>Play:  </Form.Label>
-                    <Form.Text style={{ paddingLeft: 60 }}> Play 3 </Form.Text>
+                    <Form.Text style={{ paddingLeft: 60 }}> Romeo & Juliet </Form.Text>
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>People: </Form.Label>
-                    <Form.Text style={{ paddingLeft: 40 }}>FILLER </Form.Text>
+                    <Form.Text style={{ paddingLeft: 40 }}> Barry Blue, Rachel Red </Form.Text>
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>Details: </Form.Label>
-                    <Form.Text style={{ paddingLeft: 39 }}> FILLER </Form.Text>
+                    <Form.Text style={{ paddingLeft: 39 }}> Scheduled in Room 3 </Form.Text>
                   </Form.Row>
                 </Form.Group>
               </Form>
@@ -529,15 +529,15 @@ class Calendar extends React.Component {
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>Play:  </Form.Label>
-                    <Form.Text style={{ paddingLeft: 60 }}> Play 4 </Form.Text>
+                    <Form.Text style={{ paddingLeft: 60 }}> Twelth Night </Form.Text>
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>People: </Form.Label>
-                    <Form.Text style={{ paddingLeft: 40 }}>FILLER </Form.Text>
+                    <Form.Text style={{ paddingLeft: 40 }}> Billy Black, Eli Eggshell, Suzy Seafoam </Form.Text>
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>Details: </Form.Label>
-                    <Form.Text style={{ paddingLeft: 39 }}> FILLER </Form.Text>
+                    <Form.Text style={{ paddingLeft: 39 }}> Scheduled in Room 4 </Form.Text>
                   </Form.Row>
                 </Form.Group>
               </Form>
@@ -564,15 +564,15 @@ class Calendar extends React.Component {
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>Play:  </Form.Label>
-                    <Form.Text style={{ paddingLeft: 60 }}> Play 2 </Form.Text>
+                    <Form.Text style={{ paddingLeft: 60 }}> Hamlet </Form.Text>
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>People: </Form.Label>
-                    <Form.Text style={{ paddingLeft: 40 }}>FILLER </Form.Text>
+                    <Form.Text style={{ paddingLeft: 40 }}> Walter White, Gary Green, Mary Magenta </Form.Text>
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>Details: </Form.Label>
-                    <Form.Text style={{ paddingLeft: 39 }}> FILLER </Form.Text>
+                    <Form.Text style={{ paddingLeft: 39 }}> Scheduled in Room 2 </Form.Text>
                   </Form.Row>
                 </Form.Group>
               </Form>
@@ -599,15 +599,15 @@ class Calendar extends React.Component {
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>Play:  </Form.Label>
-                    <Form.Text style={{ paddingLeft: 60 }}> Play 1 </Form.Text>
+                    <Form.Text style={{ paddingLeft: 60 }}> Macbeth </Form.Text>
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>People: </Form.Label>
-                    <Form.Text style={{ paddingLeft: 40 }}>FILLER </Form.Text>
+                    <Form.Text style={{ paddingLeft: 40 }}>Sarah Scarlett, Penny Purple </Form.Text>
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>Details: </Form.Label>
-                    <Form.Text style={{ paddingLeft: 39 }}> FILLER </Form.Text>
+                    <Form.Text style={{ paddingLeft: 39 }}> Scheduled in Room 1 </Form.Text>
                   </Form.Row>
                 </Form.Group>
               </Form>
@@ -634,15 +634,15 @@ class Calendar extends React.Component {
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>Play:  </Form.Label>
-                    <Form.Text style={{ paddingLeft: 60 }}> Play 4 </Form.Text>
+                    <Form.Text style={{ paddingLeft: 60 }}> Twelth Night </Form.Text>
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>People: </Form.Label>
-                    <Form.Text style={{ paddingLeft: 40 }}>FILLER </Form.Text>
+                    <Form.Text style={{ paddingLeft: 40 }}>Billy Black, Eli Eggshell, Suzy Seafoam </Form.Text>
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>Details: </Form.Label>
-                    <Form.Text style={{ paddingLeft: 39 }}> FILLER </Form.Text>
+                    <Form.Text style={{ paddingLeft: 39 }}> Scheduled in Room 4 </Form.Text>
                   </Form.Row>
                 </Form.Group>
               </Form>
@@ -670,15 +670,15 @@ class Calendar extends React.Component {
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>Play:  </Form.Label>
-                    <Form.Text style={{ paddingLeft: 60 }}> Play 2 </Form.Text>
+                    <Form.Text style={{ paddingLeft: 60 }}> Hamlet </Form.Text>
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>People: </Form.Label>
-                    <Form.Text style={{ paddingLeft: 40 }}>FILLER </Form.Text>
+                    <Form.Text style={{ paddingLeft: 40 }}> Walter White, Gary Green, Mary Magenta </Form.Text>
                   </Form.Row>
                   <Form.Row style={{ paddingTop: 5 }}>
                     <Form.Label>Details: </Form.Label>
-                    <Form.Text style={{ paddingLeft: 39 }}> FILLER </Form.Text>
+                    <Form.Text style={{ paddingLeft: 39 }}> Scheduled in Room 2 </Form.Text>
                   </Form.Row>
                 </Form.Group>
               </Form>
