@@ -11,7 +11,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="CWU" />
-          <h1 className="App-Title">
+          <h1 style={{paddingTop: '10px'}}className="App-Title">
             CWU Rehearsal Calendar
           </h1>
         </header>

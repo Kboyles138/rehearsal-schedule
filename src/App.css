@@ -4,7 +4,7 @@
 
 .App-logo {
   padding: calc(12px);
-  height: calc(60px);
+  height: calc(70px);
   pointer-events: none;
 }
 
@@ -14,6 +14,8 @@
   display: flex;
   font-size: calc(15px);
   color: white;
+
+  
 }
 
 

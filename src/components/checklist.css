@@ -8,8 +8,8 @@
   background-color: rgb(255, 204, 146);
 }
 .checkbox1>.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
-  background-color:rgb(255, 166, 64);
-  border-color:rgb(255, 166, 64);
+  background-color:#f7b336;
+  border-color:#f7b336;
 }
 
 .checkbox2>.custom-checkbox .custom-control-label::before{
@@ -17,8 +17,8 @@
   background-color: rgb(165, 174, 255);
 }
   .checkbox2>.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
-    background-color:rgb(95, 111, 255);
-    border-color:rgb(95, 111, 255);
+    background-color:#5f6fff;
+    border-color:#5f6fff;
   }
 
   .checkbox3>.custom-checkbox .custom-control-label::before{
@@ -26,8 +26,8 @@
     background-color: rgb(255, 171, 171);
   }
   .checkbox3>.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
-    background-color:rgb(255, 75, 75);
-    border-color:rgb(255, 75, 75);
+    background-color:#ed5959;
+    border-color:#ed5959;
   }
 
   .checkbox4>.custom-checkbox .custom-control-label::before{
@@ -35,8 +35,8 @@
     background-color: rgb(172, 251, 169);
   }
   .checkbox4>.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
-    background-color:rgb(80, 197, 76);
-    border-color:rgb(80, 197, 76);
+    background-color:#50c54c;
+    border-color:#50c54c;
   }
 
   .checkbox5>.custom-checkbox .custom-control-label::before{
