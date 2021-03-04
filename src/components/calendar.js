@@ -335,7 +335,7 @@ class Calendar extends React.Component {
                 <div class="checkbox1">
                   <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="play1" onClick={this.handleCheck1} defaultChecked/>
-                    <label class="custom-control-label" for="play1">Macbeth ⠀⠀⠀⠀⠀⭐</label>
+                    <label class="custom-control-label" for="play1">Macbeth ⠀⠀⠀⠀⭐</label>
                   </div> <br style={styles.break}></br>
                 </div>
                 <div class="checkbox2">
@@ -347,7 +347,7 @@ class Calendar extends React.Component {
                 <div class="checkbox3">
                   <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="play3" onClick={this.handleCheck3} defaultChecked/>
-                    <label class="custom-control-label" for="play3">Romeo & Juliet ⠀⠀⠀⠀⠀⭐</label>
+                    <label class="custom-control-label" for="play3">Romeo & Juliet⭐</label>
                   </div>
                 </div> <br style={styles.break}></br>
                 <div class="checkbox4">
@@ -359,7 +359,7 @@ class Calendar extends React.Component {
                 <div class="checkbox5">
                   <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="myPlays" onClick={this.toggleAll} defaultChecked/>
-                    <label class="custom-control-label" for="myPlays">My Events ⠀⠀⭐</label>
+                    <label class="custom-control-label" for="myPlays">My Events ⠀⠀⠀⭐</label>
                   </div>
                 </div> <br style={styles.break}></br>
               </div>
