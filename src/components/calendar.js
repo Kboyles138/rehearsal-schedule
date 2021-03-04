@@ -709,9 +709,9 @@ class Calendar extends React.Component {
                 <option>Add new play</option>
               </Form.Control>
               <Form.Label>Add people: </Form.Label>
-              <Form.Control type="text" />
+              <Form.Control as="textarea" rows={2}/>
               <Form.Label>Details: </Form.Label>
-              <Form.Control type="text" />
+              <Form.Control as="textarea" rows={3} />
             </Form.Group>
             <Button onClick={this.handleClose}>Save</Button>
           </Modal.Body>
