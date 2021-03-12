@@ -260,7 +260,7 @@ class Calendar extends React.Component {
         width: '20%',
         float: 'right',
         marginTop: '75px',
-        marginLeft: '70px',
+        marginLeft: '0px',
       }
     }
     return (
